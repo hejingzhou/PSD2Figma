@@ -1,0 +1,13 @@
+{
+  "id": "1611677479278356694",
+  "name": "PSD 转 Figma 转换器",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "ui": "dist/src/index.html",
+  "editorType": ["figma"],
+  "documentAccess": "dynamic-page",
+  "networkAccess": {
+    "allowedDomains": ["*"],
+    "reasoning": "用于加载 PSD 文件中引用的外部资源。"
+  }
+}

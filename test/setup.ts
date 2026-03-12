@@ -1,0 +1,60 @@
+// Mock Figma API
+global.figma = {
+  createPage: vi.fn(() => ({
+    type: 'PAGE',
+    name: 'Page',
+    children: [],
+    appendChild: vi.fn(),
+    remove: vi.fn(),
+    selection: [],
+    resize: vi.fn(),
+  })),
+  createFrame: vi.fn(() => ({
+    type: 'FRAME',
+    name: 'Frame',
+    children: [],
+    appendChild: vi.fn(),
+    resize: vi.fn(),
+    setPluginData: vi.fn(),
+    setSharedPluginData: vi.fn(),
+    remove: vi.fn(),
+  })),
+  group: vi.fn((nodes, parent) => ({
+    type: 'GROUP',
+    name: 'Group',
+    children: nodes || [],
+    parent,
+    appendChild: vi.fn(),
+    setPluginData: vi.fn(),
+    setSharedPluginData: vi.fn(),
+  })),
+  createRectangle: vi.fn(() => ({
+    type: 'RECTANGLE',
+    name: 'Rectangle',
+    resize: vi.fn(),
+    fills: [],
+    setPluginData: vi.fn(),
+    setSharedPluginData: vi.fn(),
+  })),
+  createText: vi.fn(() => ({
+    type: 'TEXT',
+    name: 'Text',
+    characters: '',
+    fontSize: 12,
+    fontName: { family: 'Inter', style: 'Regular' },
+    fills: [],
+    setPluginData: vi.fn(),
+    setSharedPluginData: vi.fn(),
+  })),
+  createImage: vi.fn((bytes) => ({
+    hash: 'mock-hash',
+  })),
+  loadFontAsync: vi.fn().mockResolvedValue(undefined),
+  notify: vi.fn(),
+  viewport: {
+    scrollAndZoomIntoView: vi.fn(),
+  },
+  ui: {
+    postMessage: vi.fn(),
+  },
+} as any;
