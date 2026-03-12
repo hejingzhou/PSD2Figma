@@ -1,5 +1,6 @@
-# PSD 转 Figma 转换器
 
+# PSD 转 Figma 转换器
+![cover](https://github.com/hejingzhou/PSD2Figma/blob/main/cover-v2.svg)
 将 Photoshop 的 PSD 文件导入 Figma，并尽可能保留图层结构、样式与可编辑能力。
 
 ## 当前能力
